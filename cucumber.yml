@@ -1,0 +1,7 @@
+default: -r features --format html --out=result/result.html
+headless_all: HEADLESS=true -r features
+headless_moodle: HEADLESS=true --tags @moodle -r features
+headless_workbench: HEADLESS=true --tags @workbench -r features
+parallel: HEADLESS=true --tags @nightly -r features
+headless_smoke_test: HEADLESS=true --tags @smoke_test -r features
+
